@@ -1,8 +1,8 @@
 <template>
     <body id="app">
-        <HeaderNavbar />
+        <HeaderNavbar :account="account" />
 
-        <router-view />
+        <router-view v-on:connected="accountData" />
 
         <FooterNavbar />
     </body>
@@ -10,6 +10,16 @@
 
 <script>
 export default {
+    data() {
+        return {
+            account: null
+        }
+    },
+    methods: {
+        accountData(data) {
+            this.account = data
+        }
+    },
     mounted() {
         const device = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent)
         if (device) {

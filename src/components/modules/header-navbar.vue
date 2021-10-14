@@ -28,13 +28,19 @@
                 <Locale />
             </ul>
 
-            <button class="action" v-text="$t('navbar[0][2]')"></button>
+            <button class="action" v-text="account ? truncate(account, 8, 4, 12) : $t('navbar[0][2]')"></button>
         </nav>
     </header>
 </template>
 
 <script>
 export default {
+    props: {
+        account: {
+            type: String,
+            default: ''
+        }
+    },
     data() {
         return {
             active: false,
@@ -47,6 +53,14 @@ export default {
         },
         switchActive(value) {
             value ? (this.active = !this.active) : (this.active = false)
+        },
+        truncate(str, before, after, maxLength) {
+            if (str.length > maxLength) {
+                let start = str.substring(0, before)
+                let end = str.substring(str.length - after, str.length)
+                return start + '...' + end
+            }
+            return str
         }
     },
     mounted() {

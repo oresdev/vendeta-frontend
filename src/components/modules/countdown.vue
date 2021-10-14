@@ -1,23 +1,27 @@
 <template>
     <div class="countdown">
         <div v-if="days" class="countdown__block">
-            <div class="countdown__digit">{{ days | twoDigits }}</div>
+            <div class="countdown__digit" :style="'font-size:' + size">{{ days | twoDigits }}</div>
         </div>
         <div class="countdown__block">
-            <div class="countdown__digit">{{ hours | twoDigits }}</div>
+            <div class="countdown__digit" :style="'font-size:' + size">{{ hours | twoDigits }}</div>
         </div>
         <div class="countdown__block">
-            <div class="countdown__digit">{{ minutes | twoDigits }}</div>
+            <div class="countdown__digit" :style="'font-size:' + size">{{ minutes | twoDigits }}</div>
         </div>
         <div class="countdown__block">
-            <div class="countdown__digit">{{ seconds | twoDigits }}</div>
+            <div class="countdown__digit" :style="'font-size:' + size">{{ seconds | twoDigits }}</div>
         </div>
     </div>
 </template>
 <script>
 export default {
     props: {
-        date: null
+        date: null,
+        size: {
+            type: String,
+            default: ''
+        }
     },
     data() {
         return {
@@ -110,6 +114,8 @@ export default {
 @media only screen and (max-width: 975px) {
     .countdown {
         &__digit {
+            --scheme-xh: 28px;
+
             font-size: var(--scheme-s);
 
             &:before {

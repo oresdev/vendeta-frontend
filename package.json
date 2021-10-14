@@ -9,6 +9,7 @@
         "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/./common/i18n/locales/**/*.json\""
     },
     "dependencies": {
+        "@metamask/detect-provider": "^1.2.0",
         "axios": "^0.21.1",
         "chart.js": "2.7.2",
         "chartjs-plugin-labels": "1.1.0",
@@ -20,7 +21,8 @@
         "vue-i18n": "^8.22.3",
         "vue-router": "^3.2.0",
         "vue-typical": "1.6.2",
-        "vuex": "^3.4.0"
+        "vuex": "^3.4.0",
+        "web3-utils": "^1.6.0"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "~4.5.0",
