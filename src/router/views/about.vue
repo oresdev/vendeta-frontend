@@ -5,16 +5,15 @@
                 <h1>INFORMATION</h1>
                 <h3>PROJECT INTRODUCTION</h3>
                 <p>
-                    Matic Network is a Layer 2 scaling solution that achieves scale by utilizing sidechains for off-chain computation while ensuring asset security using the Plasma
-                    framework and a decentralized network of Proof-of-Stake (PoS) validators. Matic aims to be the de-facto platform on which developers will deploy and run
-                    decentralized applications. Matic Network has been a significant contributor to the Ethereum ecosystem having worked on implementations of Plasma MVP (Minimum
-                    Viable Plasma) WalletConnect protocol and the popular Ethereum event notification engine - Dagger.
+                    Vendeta is a decentralized blockchain based VPN that uses quantum encryption to protect your privacy, we don't collect user's personal data. We protect you
+                    without affecting the quality of your browsing experience.
                 </p>
 
                 <h3>KEY FEATURES</h3>
                 <p>
-                    Scalability: Fast low-cost and secure transactions on Matic sidechains with finality achieved on mainchain and Ethereum as the first compatible Layer 1
-                    basechain
+                    Scalability: The most common problems of modern VPN services is lack of user's data security and limited possibilities even in paid tariff plans. We know, how
+                    to solve this problems for you. We don't collect your data. We don't cooperate with the governments. We protect your traffic from possible hacker attacks with
+                    the help of our quantum encryption, so even supercomputer can't hack you. We offer you reliable, fast, secure VPN for a cheap price.
                 </p>
             </div>
         </div>

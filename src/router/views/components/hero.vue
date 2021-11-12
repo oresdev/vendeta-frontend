@@ -17,7 +17,7 @@
 h1 {
     color: var(--scheme-v2);
     font-size: var(--scheme-h);
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 
     b,
     span {
@@ -25,7 +25,7 @@ h1 {
     }
 
     b {
-        margin: 0 0 0 45px;
+        margin: -10px 0 10px 45px;
         text-transform: uppercase;
     }
 

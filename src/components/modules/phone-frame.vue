@@ -1,26 +1,38 @@
 <template>
     <div class="phone">
         <div class="phone__container">
-            <div class="phone__speaker"></div>
-            <div class="phone__settings"></div>
-            <div class="phone__label">VEN VPN</div>
-            <div class="phone__bugs"></div>
-            <div class="phone__button">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <linearGradient id="button">
-                        <stop offset="5%" stop-color="#0083b0" />
-                        <stop offset="95%" stop-color="#00b4db" />
-                    </linearGradient>
-                    <path
-                        fill="url('#button')"
-                        d="m6.265 3.807 1.147 1.639a8 8 0 1 0 9.176 0l1.147-1.639A9.988 9.988 0 0 1 22 12c0 5.523-4.477 10-10 10S2 17.523 2 12a9.988 9.988 0 0 1 4.265-8.193zM11 12V2h2v10h-2z"
-                    />
-                </svg> -->
-                <span>Connected to AP-0 (EU, Norway)</span>
+            <div class="phone__header">
+                <svg width="56" height="10" xmlns="http://www.w3.org/2000/svg">
+                    <rect height="7" width="55" y="2.5" x="0.5" fill="#f3f3f3" />
+                </svg>
+                VPN Connected <span>56 : 30 : 10</span>
             </div>
+
+            <div class="phone__main">
+                <Switch-button />
+
+                <ul class="phone__speedtest">
+                    <li>120 Mb/s <small>DOWNLOAD</small></li>
+                    <li>34.7 Mb/s <small>UPLOAD</small></li>
+                </ul>
+
+                <div class="phone__button">
+                    <small>231:532:531:20</small>
+                    North America - Canada
+                </div>
+            </div>
+
             <div class="phone__footer">
-                <button>CONNECTION INFO</button>
-                <button>CHANGE SERVER</button>
+                <div class="phone__button phone__settings"></div>
+                <div class="phone__button-reversed phone__logo">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 739.54" fill="var(--scheme-v4)">
+                            <path d="M700 100 350 300 0 100 180 0l170 100L520 0l180 100z" style="opacity: 0.2" />
+                            <path d="M700 199.54v340l-350 200-350-200v-340l180 100v140l170 100 170-100v-140l180-100z" />
+                        </svg>
+                    </figure>
+                </div>
+                <div class="phone__button phone__stats"></div>
             </div>
         </div>
     </div>
@@ -38,96 +50,96 @@
     width: 300px;
 
     &__container {
-        align-items: center;
         background-color: #fefefe;
-        background-image: linear-gradient(45deg, #fcfcfc, white);
+        background-image: linear-gradient(45deg, #fcfcfc, #ffffff);
         border-radius: 30px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto) 1fr auto;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
         height: 100%;
-        justify-items: center;
         padding: 30px;
+        text-align: center;
     }
 
-    &__speaker {
-        grid-area: 1 / 1 / 2 / 4;
-        width: 50px;
-        height: 7px;
-        border-radius: 10px;
-        background-color: #f3f3f3;
-        margin: 0 0 20px;
-    }
+    &__header {
+        color: var(--scheme-v4);
+        svg {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        span {
+            color: var(--scheme-v1);
+            display: block;
+            line-height: 1.2;
 
-    &__settings {
-        grid-area: 2 / 1 / 3 / 2;
-        margin: 0 auto 0 0;
-
-        &::before {
-            content: '\f0e8';
-            font-family: var(--scheme-icon);
-            font-size: 22px;
-            vertical-align: -0.2em;
+            &::before {
+                content: '・';
+                color: #00db8f;
+                font-size: 28px;
+                margin: 0 0 0 -6px;
+                vertical-align: -0.16em;
+            }
         }
     }
 
-    &__label {
-        grid-area: 2 / 2 / 3 / 3;
-    }
+    &__speedtest {
+        display: flex;
+        justify-content: space-around;
 
-    &__bugs {
-        grid-area: 2 / 3 / 3 / 4;
-        margin: 0 0 0 auto;
-
-        &::before {
-            content: '\eb07';
-            font-family: var(--scheme-icon);
-            font-size: 22px;
-            vertical-align: -0.2em;
+        small {
+            display: block;
+            font-size: 10px;
+            color: #bbbbbb;
         }
     }
 
     &__button {
-        grid-area: 3 / 1 / 4 / 4;
-        text-align: center;
+        box-shadow: -5px -5px 2px #fff, 2px 2px 5px #eee;
+        border-radius: 5px;
+        margin: 20px auto;
+        padding: 15px;
+        min-width: 66px;
 
-        &::before {
-            content: '\f126';
-            background: var(--scheme-gradient);
-            background-clip: text;
-            font-family: var(--scheme-icon);
-            font-size: 154px;
-            line-height: 1;
-
-            -webkit-text-fill-color: transparent;
-        }
-
-        span {
-            color: var(--scheme-v3);
+        small {
             display: block;
-            font-size: 14px;
+            font-size: 10px;
+            color: #bbbbbb;
+        }
+    }
+
+    &__button-reversed {
+        box-shadow: inset -5px -5px 2px #fff, inset 2px 2px 5px #eee;
+        border-radius: 5px;
+        margin: 20px auto;
+        min-width: 66px;
+        padding: 10px 15px;
+    }
+
+    &__logo {
+        figure {
+            width: 28px;
+            margin: 6.6px auto auto;
         }
     }
 
     &__footer {
-        grid-area: 4 / 1 / 5 / 4;
-        text-align: center;
+        display: flex;
 
-        button {
-            border-radius: 25px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
-            color: var(--scheme-v3);
-            cursor: default;
-            font-size: 14px;
-            padding: 5px 26px;
-            transition: all 0.3s ease 0s;
-
+        .phone__button {
+            &:first-child {
+                padding: 10px 15px;
+                &::before {
+                    color: #bbbbbb;
+                    content: '\f0e8';
+                    font-family: var(--scheme-icon);
+                    font-size: 26px;
+                }
+            }
             &:last-child {
-                background: var(--scheme-gradient);
-                color: #f3f3f3;
-                margin: 20px 0 0;
+                padding: 10px 15px;
+                &::before {
+                    color: #bbbbbb;
+                    content: '\f19d';
+                    font-family: var(--scheme-icon);
+                    font-size: 26px;
+                }
             }
         }
     }

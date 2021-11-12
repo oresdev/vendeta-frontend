@@ -48,10 +48,10 @@ export default {
 
 @font-face {
     font-family: 'remixicon';
-    src: url('~@/assets/fonts/icons/remixicon.eot?t=1633968805162');
-    src: url('~@/assets/fonts/icons/remixicon.eot?t=1633968805162#iefix') format('embedded-opentype'), url('~@/assets/fonts/icons/remixicon.woff2?t=1633968805162') format('woff2'),
-        url('~@/assets/fonts/icons/remixicon.woff?t=1633968805162') format('woff'), url('~@/assets/fonts/icons/remixicon.ttf?t=1633968805162') format('truetype'),
-        url('~@/assets/fonts/icons/remixicon.svg?t=1633968805162#remixicon') format('svg');
+    src: url('~@/assets/fonts/icons/remixicon.eot?t=1636719158817');
+    src: url('~@/assets/fonts/icons/remixicon.eot?t=1636719158817#iefix') format('embedded-opentype'), url('~@/assets/fonts/icons/remixicon.woff2?t=1636719158817') format('woff2'),
+        url('~@/assets/fonts/icons/remixicon.woff?t=1636719158817') format('woff'), url('~@/assets/fonts/icons/remixicon.ttf?t=1636719158817') format('truetype'),
+        url('~@/assets/fonts/icons/remixicon.svg?t=1636719158817#remixicon') format('svg');
     font-display: swap;
 }
 
@@ -67,10 +67,10 @@ export default {
 
     // project font-family
     --scheme-font: 400 var(--scheme-xs) / 1.64 'Jost', sans-serif;
-    --scheme-h: 58px;
-    --scheme-xh: 48px;
+    --scheme-h: 56px;
+    --scheme-xh: 46px;
     --scheme-m: 32px;
-    --scheme-xm: 28px;
+    --scheme-xm: 26px;
     --scheme-s: 18px;
     --scheme-xs: 16px;
 
